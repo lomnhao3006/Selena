@@ -105,7 +105,7 @@
 </head>
 <body class="flex flex-col items-center py-6 px-4 text-plum-600 relative overflow-x-hidden">
 
-    <!-- Background Decorative SVGs (โทนม่วง เหลือง พาสเทล) -->
+    <!-- Background Decorative SVGs -->
     <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
         <svg class="absolute top-[5%] left-[10%] w-8 h-8 text-butter-300 anim-float-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
         <svg class="absolute top-[15%] left-[2%] w-6 h-6 text-lavender-200 anim-pulse" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
@@ -124,7 +124,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5 text-butter-300">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
-        คัดลอกเลขบัญชีแล้ว
+        <span id="toast-text">คัดลอกข้อมูลเรียบร้อยแล้ว</span>
     </div>
 
     <!-- Container หลัก -->
@@ -133,12 +133,10 @@
         <!-- Header -->
         <div class="text-center pt-2 pb-2 relative">
             <h1 class="text-2xl font-bold tracking-tight text-lavender-500 flex items-center justify-center gap-2">
-                <!-- ดาว/หัวใจซ้าย -->
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-butter-400 anim-pulse">
                     <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
                 </svg>
                 Selena
-                <!-- ดาว/หัวใจขวา -->
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-butter-400 anim-pulse transform -scale-x-100">
                     <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
                 </svg>
@@ -146,7 +144,7 @@
             <p class="text-sm font-medium text-plum-400 mt-1">Payment & Checkout</p>
         </div>
 
-        <!-- ================= ดีไซน์การ์ด (Glass & App Style โทนม่วง-เหลืองพาสเทล) ================= -->
+        <!-- Glass Card Container -->
         <div class="glass-card rounded-[40px] p-3 relative z-10">
             
             <!-- SVG ตกแต่งบนการ์ด -->
@@ -154,19 +152,17 @@
             <svg class="absolute top-[25%] -right-3 w-7 h-7 text-butter-300 anim-float-2 z-20 drop-shadow-sm" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
             <svg class="absolute bottom-[40%] -left-3 w-5 h-5 text-lavender-400 anim-spin z-20 drop-shadow-sm" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
 
-            <!-- รูปภาพ (พร้อมกรอบเส้นประวิ่ง) -->
+            <!-- รูปภาพ QR Code -->
             <div class="relative p-2 rounded-[36px] z-10">
-                <!-- SVG เส้นประวิ่ง -->
                 <svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="2" y="2" width="calc(100% - 4px)" height="calc(100% - 4px)" rx="34" fill="none" stroke="#b589ff" stroke-width="2.5" stroke-dasharray="12 12" stroke-linecap="round" class="animate-dash" />
                 </svg>
-                <!-- คอนเทนเนอร์รูปภาพ (ดึงรูปตรงจาก Google Drive ID) -->
                 <div class="rounded-[28px] overflow-hidden relative shadow-sm border-[4px] border-white bg-lavender-50">
                     <img src="https://lh3.googleusercontent.com/d/1EthfVBkzQR6WBwjbF3Cu8j2EXf6IOg_R" alt="บัญชี Selena" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/600x600/f3ebff/7e699c?text=Selena+Payment'">
                 </div>
             </div>
 
-            <!-- โซนข้อความ (จัดเรียงเป็นสัดส่วน) -->
+            <!-- โซนข้อความ -->
             <div class="p-4 pt-6 space-y-5">
                 
                 <!-- กล่องต้อนรับ -->
@@ -187,7 +183,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5 text-lavender-500 shrink-0">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5zM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0113.5 9.375v-4.5z" />
                         </svg>
-                        เซฟรูปสแกน หรือจิ้มคัดลอกเลขบัญชีได้เลยน้า
+                        เซฟรูปสแกน หรือจิ้มคัดลอกข้อมูลได้เลยน้า
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5 text-lavender-500 shrink-0">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75" />
                         </svg>
@@ -201,12 +197,11 @@
                     <div class="h-px bg-lavender-200 flex-1"></div>
                 </div>
 
-                <!-- โซนบัญชีธนาคาร (สไตล์ Virtual Card) -->
+                <!-- โซนบัญชีธนาคาร (Virtual Card) -->
                 <div class="space-y-4">
                     
-                    <!-- บัตรกสิกรไทย (โทนม่วงพาสเทล) -->
-                    <div class="virtual-card relative bg-gradient-to-br from-lavender-300 to-lavender-400 rounded-[24px] p-5 shadow-lg shadow-lavender-400/25 overflow-hidden cursor-pointer border border-lavender-200/50" onclick="copyText('1343628230', this, 'kbank')">
-                        <!-- ลายน้ำดาว -->
+                    <!-- บัตรกสิกรไทย -->
+                    <div class="virtual-card relative bg-gradient-to-br from-lavender-300 to-lavender-400 rounded-[24px] p-5 shadow-lg shadow-lavender-400/25 overflow-hidden cursor-pointer border border-lavender-200/50" onclick="copyText('1343628230', this, 'kbank', 'คัดลอกเลขบัญชี KBank แล้ว')">
                         <svg class="absolute -right-6 -bottom-6 w-32 h-32 text-white opacity-15 transform -rotate-12 pointer-events-none" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
                         
                         <div class="relative z-10 flex flex-col gap-4">
@@ -226,9 +221,8 @@
                         </div>
                     </div>
 
-                    <!-- บัตร TrueMoney (โทนเหลืองพาสเทล) -->
-                    <div class="virtual-card relative bg-gradient-to-br from-butter-300 to-butter-400 rounded-[24px] p-5 shadow-lg shadow-butter-400/25 overflow-hidden cursor-pointer border border-butter-200/70" onclick="copyText('0932844721', this, 'true')">
-                        <!-- ลายน้ำดาว -->
+                    <!-- บัตร TrueMoney -->
+                    <div class="virtual-card relative bg-gradient-to-br from-butter-300 to-butter-400 rounded-[24px] p-5 shadow-lg shadow-butter-400/25 overflow-hidden cursor-pointer border border-butter-200/70" onclick="copyText('0932844721', this, 'true', 'คัดลอกเบอร์ TrueMoney แล้ว')">
                         <svg class="absolute -left-6 -top-6 w-32 h-32 text-white opacity-25 transform rotate-12 pointer-events-none" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
 
                         <div class="relative z-10 flex flex-col gap-4">
@@ -248,20 +242,17 @@
                         </div>
                     </div>
 
-                    <!-- กล่องสำคัญ (ดีไซน์แบบคูปองเส้นประ) -->
+                    <!-- กล่องสำคัญ -->
                     <div class="relative bg-gradient-to-br from-lavender-100/90 to-butter-50/90 rounded-[20px] p-3.5 border-2 border-dashed border-lavender-300 shadow-sm z-10 overflow-hidden transform transition-transform hover:scale-[1.02] mt-1">
-                        <!-- ลายน้ำหัวใจจิ๋วๆ ในกล่อง -->
                         <svg class="absolute -right-3 -bottom-3 w-14 h-14 text-lavender-200/70 transform -rotate-12 pointer-events-none" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
 
                         <div class="flex items-start gap-3 relative z-10">
-                            <!-- ไอคอนแจ้งเตือนเด้งดึ๋ง -->
                             <div class="bg-lavender-400 p-1.5 rounded-full shadow-md text-white flex-shrink-0 mt-1 animate-bounce">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-3.5 h-3.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                                 </svg>
                             </div>
                             <div class="text-[12px] text-plum-600 leading-relaxed text-left flex-1">
-                                <!-- ป้าย Tag สำคัญ -->
                                 <span class="inline-block bg-lavender-500 text-white text-[9.5px] font-bold px-2.5 py-0.5 rounded-full mb-1.5 tracking-wider shadow-sm">
                                     สำคัญ
                                 </span><br>
@@ -270,7 +261,7 @@
                         </div>
                     </div>
 
-                    <!-- กล่องเตือนโอนผิด / ห้ามโอน TrueMoney เข้าธนาคาร -->
+                    <!-- กล่องเตือนโอนผิด -->
                     <div class="bg-butter-100/90 border border-butter-300 rounded-2xl p-3 flex items-start gap-3 text-left">
                         <div class="bg-white p-1.5 rounded-full shadow-sm text-butter-500 flex-shrink-0">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
@@ -286,20 +277,26 @@
                         </div>
                     </div>
 
-                    <!-- กล่อง Note ทำกิจปอง Line -->
-                    <div class="bg-lavender-50/95 border border-lavender-200 rounded-2xl p-3 flex items-start gap-3 text-left">
-                        <div class="bg-white p-1.5 rounded-full shadow-sm text-lavender-500 flex-shrink-0">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
-                            </svg>
+                    <!-- กล่อง Note ทำกิจปอง Line (เพิ่มปุ่มกดคัดลอกตรงนี้แล้วค่า) -->
+                    <div class="virtual-card bg-lavender-50/95 border border-lavender-200 rounded-2xl p-3.5 flex items-center justify-between gap-3 text-left cursor-pointer transition-transform hover:scale-[1.02]" onclick="copyText('ทำกิจปอง Line : @607hhknh', this, 'note', 'คัดลอกข้อความโน้ตแล้ว')">
+                        <div class="flex items-start gap-3">
+                            <div class="bg-white p-1.5 rounded-full shadow-sm text-lavender-500 flex-shrink-0 mt-0.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                                </svg>
+                            </div>
+                            <div class="text-[13px] leading-relaxed text-plum-600 font-medium">
+                                Note : ทำกิจปอง<br>
+                                <span class="text-plum-500 text-[12px] font-semibold flex items-center gap-1 flex-wrap">
+                                    Line : <span class="text-lavender-500 font-bold">@607hhknh</span>
+                                </span>
+                            </div>
                         </div>
-                        <div class="text-[13px] leading-relaxed text-plum-600 font-medium">
-                            Note : ทำกิจปอง<br>
-                            <span class="text-plum-500 text-[12px] font-semibold flex items-center gap-1 flex-wrap">
-                                Line : <span class="text-lavender-500 font-bold">@607hhknh</span>
-                                <svg class="w-3.5 h-3.5 text-butter-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-                            </span>
-                        </div>
+                        <!-- ปุ่มกดคัดลอกโน้ต -->
+                        <button class="note-btn bg-white text-lavender-500 text-[11.5px] font-bold px-3 py-1.5 rounded-full flex items-center gap-1 shadow-sm border border-lavender-200 pointer-events-none flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                            คัดลอก
+                        </button>
                     </div>
 
                 </div>
@@ -320,7 +317,7 @@
     </div>
 
     <script>
-        function copyText(text, containerElement, type) {
+        function copyText(text, containerElement, type, toastMessage) {
             const textArea = document.createElement("textarea");
             textArea.value = text;
             textArea.style.position = "fixed";
@@ -333,23 +330,30 @@
             try {
                 document.execCommand('copy');
                 
-                showToast();
+                showToast(toastMessage);
 
-                // อัปเดตสไตล์ปุ่มเวลาคลิกให้เข้ากับบัตรสไตล์ใหม่
-                const buttonElement = containerElement.querySelector(type === 'kbank' ? '.kbank-btn' : '.true-btn');
+                // เลือกปุ่มภายในกล่องนั้นๆ เพื่อเปลี่ยนสถานะชั่วคราว
+                let buttonSelector = '.kbank-btn';
+                if (type === 'true') buttonSelector = '.true-btn';
+                if (type === 'note') buttonSelector = '.note-btn';
+
+                const buttonElement = containerElement.querySelector(buttonSelector);
                 const originalHtml = buttonElement.innerHTML;
                 
                 buttonElement.innerHTML = `
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
                     สำเร็จ
                 `;
                 
                 if (type === 'kbank') {
                     buttonElement.classList.replace('bg-white', 'bg-white/25');
                     buttonElement.classList.replace('text-lavender-500', 'text-white');
-                } else {
+                } else if (type === 'true') {
                     buttonElement.classList.replace('bg-white', 'bg-plum-600');
                     buttonElement.classList.replace('text-plum-500', 'text-white');
+                } else {
+                    buttonElement.classList.replace('bg-white', 'bg-lavender-500');
+                    buttonElement.classList.replace('text-lavender-500', 'text-white');
                 }
                 
                 setTimeout(() => {
@@ -357,9 +361,12 @@
                     if (type === 'kbank') {
                         buttonElement.classList.replace('bg-white/25', 'bg-white');
                         buttonElement.classList.replace('text-white', 'text-lavender-500');
-                    } else {
+                    } else if (type === 'true') {
                         buttonElement.classList.replace('bg-plum-600', 'bg-white');
                         buttonElement.classList.replace('text-white', 'text-plum-500');
+                    } else {
+                        buttonElement.classList.replace('bg-lavender-500', 'bg-white');
+                        buttonElement.classList.replace('text-white', 'text-lavender-500');
                     }
                 }, 2000);
 
@@ -370,8 +377,11 @@
             document.body.removeChild(textArea);
         }
 
-        function showToast() {
+        function showToast(message) {
             const toast = document.getElementById('toast');
+            const toastText = document.getElementById('toast-text');
+            if (message) toastText.textContent = message;
+            
             toast.classList.remove('opacity-0', 'translate-y-4');
             toast.classList.add('opacity-100', 'translate-y-0');
             
